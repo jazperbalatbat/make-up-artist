@@ -5,12 +5,40 @@
     font-size: 16px;
 }
 
+@import 'heroText';
+
 #hero {
     height: 100vh;
-    background: rgb(248, 231, 200);
-    padding: 7% 0% 0% 0%;
+    // background: rgb(248, 231, 200);
     position: relative;
     overflow: hidden;
+    background: linear-gradient(22deg, rgba(79, 73, 67, 1) 0%, rgba(215, 119, 37, 1) 18%, rgba(252, 189, 134, 1) 34%, rgba(252, 211, 174, 1) 65%, rgba(255, 255, 255, 1) 100%);
+
+    .herobg_title {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 45vw;
+        color: rgba(0, 0, 0, 0.13);
+        animation: herobg_title 90000ms infinite;
+        font-family: 'Permanent Marker',
+            cursive;
+        letter-spacing: 35px;
+
+        @keyframes herobg_title {
+            0% {
+                right: 0%;
+            }
+
+            50% {
+                right: 80%;
+            }
+
+            100% {
+                right: 0%;
+            }
+        }
+    }
 
     .curtain {
         width: 100%;
@@ -20,43 +48,47 @@
         position: absolute;
         z-index: 300;
         transform: scale(0);
-        animation: heroLoad 4000ms;
+        animation: heroLoad 1000ms;
     }
 
 
 
     .hero__container {
         background-size: cover;
-        height: 85%;
-        width: 75%;
-        // background: rgb(248, 231, 200);
-        background: white;
+        height: 100%;
+        width: 100%;
+        // background: rgb(248, 231, 200);background: rgb(79,73,67);
         position: relative;
         margin: auto;
         border-radius: 10px;
 
-        .circle,
-        .circle::before {
+        .circle {
             position: absolute;
             width: 100%;
-            height: 100%;
-            // background: linear-gradient(rgb(255, 215, 162), rgb(255, 192, 110), rgba(243, 145, 16, 0.61));
-            // filter: drop-shadow(-2px -2px 20px rgba(0, 0, 0, 0.623));
+            height: 115%;
             background: url(/MUartist/images/fullmoon.png);
             // ,radial-gradient(rgba(65, 65, 65, 0.438), rgba(211, 131, 40, 0.438), rgba(0, 0, 0, 0.432));
             background-repeat: no-repeat;
             background-position: bottom center;
+            background-size: 40rem;
             z-index: 1;
+            clip-path: polygon(0 0, 100% 0, 100% 87%, 0 87%);
         }
 
         .circle::before {
             content: '';
+            position: absolute;
             background: url(/MUartist/images/fullmoon2.png);
             background-position: bottom center;
             background-repeat: no-repeat;
+            background-size: 40rem;
+            width: 100%;
+            height: 100%;
+            top: 0;
             z-index: -1;
-            opacity: 0;
-            animation: shadow 2000ms infinite;
+            opacity: 0.1;
+            animation: shadow 5000ms infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 87%, 0 87%);
         }
 
         @keyframes shadow {
@@ -68,7 +100,8 @@
                 // top: 2%;
                 transform: scale(1.01);
                 opacity: .7;
-                filter: blur(1px);
+                // filter: blur(1px);
+                filter: drop-shadow(0 0 200px gold)
             }
 
             100% {
@@ -99,8 +132,8 @@
             background-position: bottom center;
             filter: drop-shadow(0px 0px 15px black);
             z-index: 2;
+            background-size: 35%;
         }
-
 
     }
 

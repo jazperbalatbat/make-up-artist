@@ -1,0 +1,53 @@
+.design {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // background: rgba(0, 0, 0, 0.438);
+
+    ul {
+        position: absolute;
+        bottom: 15%;
+        left: 15%;
+        display: flex;
+        list-style-type: none;
+
+        li {
+            background: rgb(61, 50, 36);
+            margin: .5vw;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            box-shadow: 1px 1px 4px rgb(0, 0, 0);
+            cursor: pointer;
+        }
+    }
+
+    .d_right {
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        left: 5%;
+        background: linear-gradient(#333, goldenrod, #333);
+    }
+
+    .d_left {
+        position: absolute;
+        width: 35%;
+        height: 5px;
+        top: 10%;
+        right: 0%;
+        background: linear-gradient(to right, #333, #333, #333, goldenrod, #333, #333);
+    }
+
+    .d_mid {
+        position: absolute;
+        width: 2px;
+        height: 85%;
+        top: 10%;
+        left: 35%;
+        background: linear-gradient(goldenrod, #333, #333, #333, #333, #333, #333, goldenrod);
+        box-shadow: inset 0 -25px 25px -25px black;
+    }
+}

@@ -6,17 +6,9 @@
   font-size: 16px;
 }
 
-#hero {
-  height: 100vh;
-  position: relative;
-  background: url(../MUartist/images/bg.jpg);
-  background-size: cover;
-  padding: 10%;
-}
-
-#hero .hero_title,
-#hero .hero_desc,
-#hero .hero_translate {
+.hero_title,
+.hero_desc,
+.hero_translate {
   font-family: 'Sofia', cursive;
   position: absolute;
   z-index: 1;
@@ -24,16 +16,18 @@
   font-style: italic;
 }
 
-#hero .hero_title {
+.hero_title {
   top: 17%;
-  left: 17%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   font-size: 10rem;
   background: -webkit-linear-gradient(goldenrod, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#hero .hero_translate {
+.hero_translate {
   top: 43%;
   left: 27%;
   font-size: 1rem;
@@ -41,7 +35,7 @@
   z-index: 2;
 }
 
-#hero .hero_translate::before {
+.hero_translate::before {
   content: '';
   height: 5%;
   width: 130%;
@@ -52,7 +46,7 @@
   z-index: -1;
 }
 
-#hero .hero_desc {
+.hero_desc {
   font-family: 'Itim', cursive;
   color: rgba(218, 165, 32, 0.705);
   top: 20%;
@@ -67,32 +61,7 @@
   font-style: normal;
 }
 
-#hero .more {
-  position: absolute;
-  text-decoration: none;
-  font-family: 'Sofia', cursive;
-  border-bottom: dashed 1px goldenrod;
-  border-radius: 40px 100px 0 0;
-  color: silver;
-  padding: .25rem 15rem 0rem .5rem;
-  bottom: 5%;
-  right: -40%;
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: 100;
-  -webkit-transition: 400ms ease-in;
-  transition: 400ms ease-in;
-  z-index: 3;
-}
-
-#hero .more:hover {
-  color: #684b03;
-  letter-spacing: 10px;
-  padding: .25rem 0rem 0rem 10rem;
-  border-bottom: solid 1px goldenrod;
-}
-
-#hero .hero__container {
+.hero__container {
   background-size: cover;
   height: 100%;
   width: 60%;
@@ -103,7 +72,7 @@
           box-shadow: inset 0px 2px 5px -2px black, 0px 2px 3px black;
 }
 
-#hero .hero__container .hero_img {
+.hero__container .hero_img {
   background: url(/MUartist/images/hero.png);
   background-repeat: no-repeat;
   width: 100%;
@@ -116,15 +85,15 @@
   background-size: 50%;
 }
 
-.design {
+#design {
   position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
 }
 
-.design ul {
+#design ul {
   position: absolute;
   bottom: 15%;
   left: 15%;
@@ -134,7 +103,7 @@
   list-style-type: none;
 }
 
-.design ul li {
+#design ul li {
   background: #3d3224;
   margin: .5vw;
   height: 12px;
@@ -145,7 +114,7 @@
   cursor: pointer;
 }
 
-.design .d_right {
+#design .d_right {
   position: absolute;
   width: 5px;
   height: 100%;
@@ -154,7 +123,7 @@
   background: linear-gradient(#333, goldenrod, #333);
 }
 
-.design .d_left {
+#design .d_left {
   position: absolute;
   width: 35%;
   height: 5px;
@@ -164,15 +133,107 @@
   background: linear-gradient(to right, #333, #333, #333, goldenrod, #333, #333);
 }
 
-.design .d_mid {
+#design .d_mid {
   position: absolute;
   width: 2px;
   height: 85%;
-  top: 10%;
+  top: 5%;
   left: 35%;
   background: -webkit-gradient(linear, left top, left bottom, from(goldenrod), color-stop(#333), color-stop(#333), color-stop(#333), color-stop(#333), color-stop(#333), color-stop(#333), to(goldenrod));
   background: linear-gradient(goldenrod, #333, #333, #333, #333, #333, #333, goldenrod);
   -webkit-box-shadow: inset 0 -25px 25px -25px black;
           box-shadow: inset 0 -25px 25px -25px black;
+}
+
+.more {
+  position: absolute;
+  text-decoration: none;
+  font-family: 'Sofia', cursive;
+  border-bottom: dashed 1px goldenrod;
+  border-radius: 40px 100px 0 0;
+  color: silver;
+  padding: .25rem 15rem 0rem .5rem;
+  bottom: 25%;
+  right: 10%;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 100;
+  -webkit-transition: 400ms ease-in;
+  transition: 400ms ease-in;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.more:hover {
+  color: #684b03;
+  letter-spacing: 10px;
+  padding: .25rem 0rem 0rem 10rem;
+  border-bottom: solid 1px goldenrod;
+}
+
+body {
+  background: url(../MUartist/images/bg.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+#hero {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding: 10%;
+}
+
+#works {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  padding: 10%;
+  -webkit-transform: translate(-150%, 0%);
+          transform: translate(-150%, 0%);
+}
+
+#works .works__container {
+  height: 100%;
+  width: 100%;
+  background: #4e4e4e;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1%;
+}
+
+#works .works__container .w_information {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 0, 0, 0.137);
+}
+
+#works .works__container .w_carousel {
+  height: 100%;
+  width: 45%;
+  background: blue;
+  -webkit-clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0 100%, 29% 86%);
+          clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0 100%, 29% 86%);
+  margin-left: -20%;
+  background: url(../MUartist/art/clients/b1.jpeg);
+  background-size: cover;
+}
+
+#about {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding: 10%;
+  -webkit-transform: translate(0%, -150%);
+          transform: translate(0%, -150%);
+}
+
+#about .about__container {
+  height: 100%;
+  width: 100%;
+  background: #313131;
 }
 /*# sourceMappingURL=styles.css.map */

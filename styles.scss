@@ -7,3 +7,71 @@
 
 @import 'hero';
 @import 'design';
+
+body {
+    background: url(../MUartist/images/bg.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+#hero {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 10%;
+    // display: none;
+}
+
+#works {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    padding: 10%;
+    transform: translate(-150%, 0%);
+
+    .works__container {
+        height: 100%;
+        width: 100%;
+        background: rgb(78, 78, 78);
+        position: relative;
+        display: flex;
+        padding: 1%;
+
+        .w_information {
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 0, 0, 0.137);
+
+        }
+
+        .w_carousel {
+            height: 100%;
+            width: 45%;
+            background: blue;
+            clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0 100%, 29% 86%);
+            margin-left: -20%;
+            background: url(../MUartist/art/clients/b1.jpeg);
+            background-size: cover;
+        }
+
+    }
+}
+
+#about {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    // left: 50%;
+    padding: 10%;
+    transform: translate(0%, -150%);
+
+    .about__container {
+        height: 100%;
+        width: 100%;
+        background: rgb(49, 49, 49);
+
+    }
+
+    // display: none;
+}

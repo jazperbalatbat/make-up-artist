@@ -15,17 +15,17 @@
 
         .wc_indicator {
             position: absolute;
-            width: 16%;
+            width: 20%;
             height: 100%;
             // background: blueviolet;
             display: grid;
-            right: -16%;
+            right: -20%;
             z-index: 100;
             overflow: hidden;
 
             .wci_btn {
                 border: none;
-                outline-width: none;
+                outline-width: 0;
                 border-radius: 0px 5px 25px 0px;
                 background-size: cover;
                 opacity: .5;
@@ -35,7 +35,7 @@
 
                 &:hover {
                     width: 100%;
-                    // width: 180%;
+                    height: 100px;
                     opacity: 1;
                     border-radius: 0px 5px 5px 0px;
                     transition: 300ms ease-in;

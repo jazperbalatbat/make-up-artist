@@ -157,7 +157,7 @@ function autoCarou() {
 }
 autoCarou();
 //indicator carousel
-function carOver(x) {
+function carouOver(x) {
     hideImg();
     wcimg[x].style.cssText = "width: 100%; transition: 300ms ease-in-out;";
 }
@@ -168,7 +168,7 @@ for (let i = 0; i < 6; i++) {
 }
 for (let i = 0; i < 6; i++) {
     wciBtn[i].addEventListener("mouseover", () => {
-        carOver(i);
+        carouOver(i);
         clearInterval(setInterv);
     });
 }

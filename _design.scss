@@ -12,6 +12,7 @@
         left: 15%;
         display: flex;
         list-style-type: none;
+        z-index: 10000;
 
         li {
             background: rgb(61, 50, 36);
@@ -21,6 +22,10 @@
             border-radius: 50%;
             box-shadow: 1px 1px 4px rgb(0, 0, 0);
             cursor: pointer;
+
+            &:nth-of-type(1) {
+                background: goldenrod;
+            }
         }
     }
 
@@ -39,7 +44,7 @@
         height: 5px;
         top: 10%;
         right: 0%;
-        background: linear-gradient(to right, #333, #333, #333, goldenrod, #333, #333);
+        background: linear-gradient(to right, #333, #333, #333, #333, #333, goldenrod, #333, #333);
 
     }
 

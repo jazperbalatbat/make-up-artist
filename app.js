@@ -10,6 +10,7 @@ let works = document.querySelector("#works");
 let about = document.querySelector("#about");
 let indicator = document.querySelectorAll("#design ul li");
 let wcimg = document.querySelectorAll(".wc_img");
+let wciBtn = document.querySelectorAll(".wci_btn");
 
 
 more.addEventListener("click", () => {
@@ -127,17 +128,47 @@ indicator[3].addEventListener("click", () => {
     indi(3);
 });
 
+
+//CAROUSEL(WORK) SECTION
+
+//infinite auto loop carousel
 let pathNum = 0;
-setInterval(function () {
+let setInterv;
+
+function hideImg(x) {
     for (let i = 0; i < 6; i++) {
-        wcimg[i].style.cssText = "width: 0%; transition: 1000ms ease-in-out;";
+        if (i != x)
+            wcimg[i].style.cssText = "width: 0%; transition: 300ms ease-in-out;";
         console.log(i + ":image width is 0");
 
     }
-    wcimg[pathNum].style.cssText = "width: 100%; transition: 1000ms ease-in-out;";
-    console.log(pathNum + ":image width is 100");
-    pathNum++;
-    if (pathNum == 6)
-        pathNum = 0;
+}
 
-}, 6500);
+function autoCarou() {
+    setInterv = setInterval(function () {
+        hideImg();
+        wcimg[pathNum].style.cssText = "width: 100%; transition: 300ms ease-in-out;";
+        console.log(pathNum + ":image width is 100");
+        pathNum++;
+        if (pathNum == 6)
+            pathNum = 0;
+
+    }, 2500);
+}
+autoCarou();
+//indicator carousel
+function carOver(x) {
+    hideImg();
+    wcimg[x].style.cssText = "width: 100%; transition: 300ms ease-in-out;";
+}
+for (let i = 0; i < 6; i++) {
+    wciBtn[i].addEventListener("mouseout", () => {
+        autoCarou();
+    });
+}
+for (let i = 0; i < 6; i++) {
+    wciBtn[i].addEventListener("mouseover", () => {
+        carOver(i);
+        clearInterval(setInterv);
+    });
+}

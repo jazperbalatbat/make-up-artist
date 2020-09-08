@@ -14,95 +14,32 @@
         // display: none;
 
         .wc_indicator {
-            //     position: absolute;
-            //     width: 10%;
-            //     height: 100%;
-            //     animation: breathe 25000ms infinite;
-
-
-            //     .i_btn {
-            //         width: 100%;
-            //         border: none;
-            //         outline-width: 0;
-            //         display: block;
-            //         height: 100px;
-            //         transition: 200ms ease-in-out;
-            //         opacity: .5;
-            //         background-size: cover;
-
-
-            //         &:hover {
-            //             width: 180%;
-            //             animation: none;
-            //             opacity: 1;
-            //         }
-
-            //         &:nth-of-type(1) {
-            //             background-image: url(/MUartist/art/clients/a6.jpeg);
-            //         }
-
-            //         &:nth-of-type(2) {
-            //             background-image: url(/MUartist/art/clients/b1.jpeg);
-            //         }
-
-            //         &:nth-of-type(3) {
-            //             background-image: url(/MUartist/art/clients/c1.jpeg);
-            //         }
-
-            //         &:nth-of-type(4) {
-            //             background-image: url(/MUartist/art/clients/e1.jpeg);
-            //         }
-
-            //         &:nth-of-type(5) {
-            //             background-image: url(/MUartist/art/clients/f1.jpeg);
-            //         }
-
-            //         &:nth-of-type(6) {
-            //             background-image: url(/MUartist/art/clients/g1.jpeg);
-            //         }
-
-            //         @keyframes breathe {
-            //             to {
-            //                 transform: translateY(-200px)
-            //             }
-            //         }
-
-            //     }
-            // }
-
-            // .wc_img {
-            //     width: 100%;
-            //     height: 100%;
-            //     background-image: url(/MUartist/art/clients/b1.jpeg);
-            //     background-size: cover;
-
-
-        }
-
-        .wc_indicators {
             position: absolute;
             width: 16%;
             height: 100%;
             // background: blueviolet;
             display: grid;
-            right: -20%;
+            right: -16%;
             z-index: 100;
+            overflow: hidden;
 
             .wci_btn {
                 border: none;
                 outline-width: none;
-                border-radius: 0px 20px 20px 0px;
+                border-radius: 0px 5px 25px 0px;
                 background-size: cover;
                 opacity: .5;
-                width: 50%;
+                width: 20%;
+                height: 70px;
+                animation: btn 5000ms infinite;
 
                 &:hover {
                     width: 100%;
                     // width: 180%;
-                    animation: none;
                     opacity: 1;
                     border-radius: 0px 5px 5px 0px;
                     transition: 300ms ease-in;
+                    animation: none;
                 }
 
                 &:nth-of-type(1) {
@@ -127,6 +64,16 @@
 
                 &:nth-of-type(6) {
                     background-image: url(/MUartist/art/clients/g.png);
+                }
+
+                @keyframes btn {
+                    50% {
+                        transform: translateY(-20px);
+                    }
+
+                    100% {
+                        transform: translateY(0px);
+                    }
                 }
             }
         }

@@ -9,9 +9,7 @@ let hero = document.querySelector("#hero");
 let works = document.querySelector("#works");
 let about = document.querySelector("#about");
 let indicator = document.querySelectorAll("#design ul li");
-let apPath = ["/MUartist/art/clients/a6.jpeg", "/MUartist/art/clients/b1.jpeg", "/MUartist/art/clients/c1.jpeg", "/MUartist/art/clients/e1.jpeg", "/MUartist/art/clients/f1.jpeg", "/MUartist/art/clients/g1.jpeg"];
 let wcimg = document.querySelectorAll(".wc_img");
-let wcar = document.querySelector(".w_carousel");
 
 
 more.addEventListener("click", () => {
@@ -41,7 +39,6 @@ function heroPage() {
             " transition: 500ms ease-in-out .75s; transition-property:margin-right,width;";
         //works section
         works.style.cssText = "transform: translate(-150%, 0%); transition: 500ms ease-in-out .3s; transition-property:transform;"
-        // wcar.style.display = "none";
         //about section
         about.style.cssText = "transform: translate(0%, -150%); transition: 500ms ease-in-out .3s; transition-property:transform;"
         //design
@@ -79,7 +76,6 @@ function seeMore() {
         //works section
         works.style.cssText = "transform: translate(-50%, 0%); transition: 500ms ease-in-out 1s;" +
             " transition-property:transform;";
-        // wcar.style.display = "inline";
         //about section
         about.style.cssText = "transform: translate(0%, -150%); transition: 800ms ease-in-out .5s; transition-property:transform;"
 
@@ -97,7 +93,6 @@ function aboutMe() {
 
         //works section
         works.style.cssText = "transform: translate(-150%, 0%); transition: 500ms ease-in-out 1s; transition-property:transform;"
-        // wcar.style.display = "none";
         //about section
         about.style.cssText = "transform: translate(0%, 0%); transition: 800ms ease-in-out 1s; transition-property:transform;"
         //design
@@ -132,11 +127,6 @@ indicator[3].addEventListener("click", () => {
     indi(3);
 });
 
-// setInterval(function () {
-//     wcimg.style.cssText = "background:url(" + apPath[Math.floor(Math.random() * 5)] + ");" +
-//         " background-size:cover;  transition: 1500ms ease-in-out; ";
-
-// }, 6000);
 let pathNum = 0;
 setInterval(function () {
     for (let i = 0; i < 6; i++) {

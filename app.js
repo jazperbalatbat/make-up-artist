@@ -21,15 +21,15 @@ more.addEventListener("click", () => {
         heroTranslate.innerHTML = "Art Projects";
         heroTitle.style.cssText = "font-size: 2.5rem; top:0%; left: 50%; transition: 500ms ease-in-out .75s;" +
             " transition-property: top,font-size,left;"
-        more.style.cssText = "right: 70%; bottom: 14%";
-        more.innerHTML = "next";
+        more.style.cssText = "right: 68%; bottom: 14%";
+        more.innerHTML = "about me";
         //hero section
         heroContainer.style.cssText = "margin-right: 20%; width: 0%;" +
             " transition: 500ms ease-in-out .75s; transition-property:margin-right,width;";
         //works section
         works.style.cssText = "transform: translate(-50%, 0%); transition: 500ms ease-in-out 1s;" +
             " transition-property:transform;"
-    } else if (more.innerHTML == "next") {
+    } else if (more.innerHTML == "about me") {
         //works section
         works.style.cssText = "transform: translate(-150%, 0%); transition: 500ms ease-in-out 1s; transition-property:transform;"
         //about section
@@ -41,7 +41,7 @@ more.addEventListener("click", () => {
         dmid.style.cssText = "left:35%; transition: 1000ms ease-in-out .3s;transition-property:left;"
         heroTranslate.innerHTML = "The Artist";
         more.style.cssText = "padding: .25rem 0rem 0rem 10rem;bottom: 14%;";
-        more.innerHTML = "about me";
+        more.innerHTML = "contacts";
 
     }
 });

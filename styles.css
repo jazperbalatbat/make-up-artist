@@ -252,8 +252,9 @@
 }
 
 .works__container .w_carousel .wc_indicator .wci_btn:hover {
-  -webkit-transform: scaleX(2);
-          transform: scaleX(2);
+  -webkit-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out;
+  width: 110%;
 }
 
 .works__container .w_carousel .wc_indicator .wci_btn:nth-of-type(1) {
@@ -648,6 +649,160 @@
   left: 6%;
 }
 
+.contacts__container {
+  height: 80%;
+  width: 60%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #313131;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.contacts__container .links {
+  height: 50%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  padding: 10%;
+}
+
+.contacts__container .links .cc_link {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px;
+  -webkit-transform: rotate(40deg) skewX(-20deg);
+          transform: rotate(40deg) skewX(-20deg);
+  border-radius: 50px;
+  -webkit-box-shadow: 1px 2px 3px black;
+          box-shadow: 1px 2px 3px black;
+}
+
+.contacts__container .links .cc_link::before, .contacts__container .links .cc_link::after {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  text-decoration: none;
+  margin: 25px;
+  bottom: -50%;
+  right: -50%;
+  opacity: 0;
+  border-radius: 50px;
+}
+
+.contacts__container .links .cc_link::before {
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.contacts__container .links .cc_link::after {
+  -webkit-transition: 200ms ease-in-out 100ms;
+  transition: 200ms ease-in-out 100ms;
+}
+
+.contacts__container .links .cc_link:nth-of-type(1) {
+  background: url(/MUartist/sm/fb.png);
+  background-size: cover;
+}
+
+.contacts__container .links .cc_link:nth-of-type(1):nth-of-type(1)::before {
+  background: url(/MUartist/sm/fb.png);
+  -webkit-box-shadow: 0px 2px 10px #17274b;
+          box-shadow: 0px 2px 10px #17274b;
+  background-size: cover;
+}
+
+.contacts__container .links .cc_link:nth-of-type(1):nth-of-type(1)::after {
+  background: url(/MUartist/sm/fb.png);
+  -webkit-box-shadow: 0px 2px 10px #17274b;
+          box-shadow: 0px 2px 10px #17274b;
+  background-size: cover;
+}
+
+.contacts__container .links .cc_link:nth-of-type(2) {
+  background: url(/MUartist/sm/ig.png);
+  background-size: cover;
+}
+
+.contacts__container .links .cc_link:nth-of-type(2):nth-of-type(2)::before {
+  background: url(/MUartist/sm/ig.png);
+  -webkit-box-shadow: 0px 2px 10px #5e1d03;
+          box-shadow: 0px 2px 10px #5e1d03;
+  background-size: cover;
+}
+
+.contacts__container .links .cc_link:nth-of-type(2):nth-of-type(2)::after {
+  background: url(/MUartist/sm/ig.png);
+  -webkit-box-shadow: 0px 2px 10px #5e1d03;
+          box-shadow: 0px 2px 10px #5e1d03;
+  background-size: cover;
+}
+
+.contacts__container .links .cc_link:nth-of-type(3) {
+  background: url(/MUartist/sm/twt.png);
+  background-size: cover;
+}
+
+.contacts__container .links .cc_link:nth-of-type(3):nth-of-type(3)::before {
+  background: url(/MUartist/sm/twt.png);
+  -webkit-box-shadow: 0px 2px 10px #03095e;
+          box-shadow: 0px 2px 10px #03095e;
+  background-size: cover;
+}
+
+.contacts__container .links .cc_link:nth-of-type(3):nth-of-type(3)::after {
+  background: url(/MUartist/sm/twt.png);
+  -webkit-box-shadow: 0px 2px 10px #05035e;
+          box-shadow: 0px 2px 10px #05035e;
+  background-size: cover;
+}
+
+.contacts__container .links .cc_link:nth-of-type(4) {
+  background: url(/MUartist/sm/yt.png);
+  background-size: cover;
+}
+
+.contacts__container .links .cc_link:nth-of-type(4):nth-of-type(4)::before {
+  background: url(/MUartist/sm/yt.png);
+  -webkit-box-shadow: 0px 2px 10px #5e0303;
+          box-shadow: 0px 2px 10px #5e0303;
+  background-size: cover;
+}
+
+.contacts__container .links .cc_link:nth-of-type(4):nth-of-type(4)::after {
+  background: url(/MUartist/sm/yt.png);
+  -webkit-box-shadow: 0px 2px 10px #5e0303;
+          box-shadow: 0px 2px 10px #5e0303;
+  background-size: cover;
+}
+
+.contacts__container .links .cc_link:hover::before {
+  bottom: -30%;
+  right: -30%;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 1;
+}
+
+.contacts__container .links .cc_link:hover::after {
+  bottom: -10%;
+  right: -10%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 1;
+}
+
 body {
   background: url(../MUartist/images/bg.jpg);
   background-size: cover;
@@ -688,19 +843,5 @@ body {
   padding: 10%;
   -webkit-transform: translate(0%, 100%);
           transform: translate(0%, 100%);
-}
-
-#contacts .contacts__container {
-  height: 80%;
-  width: 60%;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background: #313131;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
 }
 /*# sourceMappingURL=styles.css.map */

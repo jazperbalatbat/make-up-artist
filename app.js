@@ -38,17 +38,6 @@ function designStructure(...args) {
     //contacts section
     contact.style.cssText = "transform: translate(" + args[20] + "); transition: 700ms ease-in-out .5s; transition-property:transform;"
 }
-//contacts section
-function contacts() {
-    // if statement to prevent the js from reloading animation
-    if (more.innerHTML != "home") {
-        designStructure("0%", "50%", "8%", "reach me out!", "2.5rem", "0%", "50%", "68%", "72%", "clamp(1rem, 2vw, 2rem)", "rgb(206, 206, 206)",
-            "capitalize", "14%", "68%", "", "home", "auto 20% auto auto", "0%", "-150%, 0%", "0%, -150%", "0%, 0%");
-
-        indi(3);
-    }
-}
-// contacts();
 
 function heroPage() {
     // if statement to prevent the js from reloading animation
@@ -73,11 +62,22 @@ function projects() {
     // if statement to prevent the js from reloading animation
     if (more.innerHTML != "contacts") {
         designStructure("40%", "95%", "78%", "art projects", "2.5rem", "0%", "50%", "16%", "10%", "clamp(1rem, 2vw, 2rem)", "rgb(206, 206, 206)",
-            "capitalize", "14%", "67%", "", "contacts", "auto 20% auto auto", "0%", "-50%, 0%", "0%, -150%", "0%, 100%");
+            "capitalize", "14%", "68%", "", "contacts", "auto 20% auto auto", "0%", "-50%, 0%", "0%, -150%", "0%, 100%");
 
         indi(2);
     }
 }
+//contacts section
+function contacts() {
+    // if statement to prevent the js from reloading animation
+    if (more.innerHTML != "home") {
+        designStructure("0%", "50%", "8%", "reach me out!", "2.5rem", "0%", "50%", "68%", "72%", "clamp(1rem, 2vw, 2rem)", "rgb(206, 206, 206)",
+            "capitalize", "14%", "68%", "", "home", "auto 20% auto auto", "0%", "-150%, 0%", "0%, -150%", "0%, 0%");
+
+        indi(3);
+    }
+}
+contacts();
 
 //navigator main button
 more.addEventListener("click", () => {
@@ -87,6 +87,10 @@ more.addEventListener("click", () => {
     } else if (more.innerHTML == "projects") {
         projects();
 
+    } else if (more.innerHTML == "contacts") {
+        contacts();
+    } else if (more.innerHTML == "home") {
+        heroPage();
     }
 });
 //indicator navigation color change

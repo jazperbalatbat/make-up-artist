@@ -887,7 +887,7 @@
 }
 
 body {
-  background: url(../MUartist/images/bg.jpg);
+  background: url(images/bg.jpg);
   background-size: cover;
   height: 100vh;
   overflow: hidden;

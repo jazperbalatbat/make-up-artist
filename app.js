@@ -12,7 +12,57 @@ let indicator = document.querySelectorAll("#design ul li");
 let wcimg = document.querySelectorAll(".wc_img");
 let wciBtn = document.querySelectorAll(".wci_btn");
 
+//main design structure animation
+function designStructure(...args) {
+    //design
+    dright.style.cssText = "right: " + args[0] + ";transition: 1000ms ease-in-out; transition-property:right,height;";
+    dleft.style.cssText = "left: " + args[1] + "; transition: 1000ms ease-in-out .5s; transition-property:left;";
+    dmid.style.cssText = "left: " + args[2] + "; transition: 1000ms ease-in-out .3s; transition-property:left;";
+    heroTranslate.innerHTML = args[3];
+    heroTitle.style.cssText = "font-size: " + args[4] + "; top: " + args[5] + "; left: " + args[6] + ";" +
+        "transform: translate(-50%, 0%); transition: 500ms ease-in-out .75s; transition-property: top,font-size,left,transform;";
+    heroTranslate.style.cssText = "top:" + args[7] + "; left: " + args[8] + "; font-size:" + args[9] + "; color:" + args[10] + ";" +
+        "text-transform:" + args[11] + "; transition: 400ms ease-in-out;";
+    more.style.cssText = "bottom:" + args[12] + "; right:" + args[13] + "; padding:" + args[14] + "";
+    more.innerHTML = args[15];
+    //hero section
+    heroContainer.style.cssText = "margin:" + args[16] + "; width: " + args[17] + ";" +
+        " transition: 500ms ease-in-out .5s; transition-property:margin,width;";
+    //work section
+    works.style.cssText = "transform: translate(" + args[18] + "); transition: 500ms ease-in-out .5s; transition-property:transform;"
+    //about section
+    about.style.cssText = "transform: translate(" + args[19] + "); transition: 500ms ease-in-out .5s; transition-property:transform;"
+}
 
+function heroPage() {
+    // if statement to prevent the js from reloading animation
+    if (more.innerHTML != "see more") {
+        designStructure("0%", "5%", "35%", "makeup artist", "10rem", "17%", "50%", "43%", "27%", "1rem", "#333",
+            "lowercase", "25%", "10%", "", "see more", "auto", "60%", "-150%, 0%", "0%, -150%");
+        indi(2);
+    }
+
+}
+
+function seeMore() {
+    // if statement to prevent the js from reloading animation
+    if (more.innerHTML != "about me") {
+        designStructure("40%", "95%", "78%", "Art Project", "2.5rem", "0%", "50%", "16%", "10%", "1.5rem", "rgb(206, 206, 206)",
+            "capitalize", "14%", "68%", "", "about me", "auto 20% auto auto", "0%", "-50%, 0%", "0%, -150%");
+
+        indi(1);
+    }
+}
+
+function aboutMe() {
+    // if statement to prevent the js from reloading animation
+    if (more != "contacts") {
+        designStructure("0%", "2%", "35%", "The Artist", "2.5rem", "0%", "50%", "16%", "10%", "1.5rem", "rgb(206, 206, 206)",
+            "capitalize", "14%", "10%", ".25rem .5rem 0rem 10rem", "contacts", "auto 20% auto auto", "0%", "-150%, 0%", "0%, 0%");
+        indi(2);
+    }
+}
+//navigator main button
 more.addEventListener("click", () => {
     if (more.innerHTML == "see more") {
         seeMore();
@@ -22,94 +72,12 @@ more.addEventListener("click", () => {
 
     }
 });
-
+//indicator navigation color change
 function indi(x) {
     for (let i = 0; i < 4; i++) {
         indicator[i].style.cssText = "background:rgb(61, 50, 36)";
     }
     indicator[x].style.cssText = "background:goldenrod";
-
-
-}
-
-function heroPage() {
-    // if statement to prevent the js from reloading animation
-    if (more.innerHTML != "see more") {
-        //hero section
-        heroContainer.style.cssText = "margin:auto; width: 60%;" +
-            " transition: 500ms ease-in-out .75s; transition-property:margin-right,width;";
-        //works section
-        works.style.cssText = "transform: translate(-150%, 0%); transition: 500ms ease-in-out .3s; transition-property:transform;"
-        //about section
-        about.style.cssText = "transform: translate(0%, -150%); transition: 500ms ease-in-out .3s; transition-property:transform;"
-        //design
-        dleft.style.cssText = "right: 0%; height:3px; transition-property:right,height;" +
-            "transition: 1000ms ease-in-out";
-        dright.style.cssText = "left:5%; transition: 1000ms ease-in-out .5s;transition-property:left;"
-        dmid.style.cssText = "left:35%; transition: 1000ms ease-in-out .3s;transition-property:left;"
-        heroTranslate.innerHTML = "makeup artist";
-        heroTitle.style.cssText = "top: 17%; left: 50%; transform: translate(-50%, 0%); font-size: 10rem; transition: 500ms ease-in";
-        heroTranslate.style.cssText = "top: 43%;left: 27%;font-size: 1rem; transition: 500ms ease-in"
-        more.style.cssText = " bottom: 25%;right: 10%;";
-        more.innerHTML = "see more";
-        indi(2);
-    }
-
-}
-
-function seeMore() {
-    // if statement to prevent the js from reloading animation
-    if (more.innerHTML != "about me") {
-        //design
-        dleft.style.cssText = "right: 40%; height:3px; transition-property:right,height;transition: 1000ms ease-in-out";
-        dright.style.cssText = "left:95%; transition: 1000ms ease-in-out .5s;transition-property:left;"
-        dmid.style.cssText = "left:78%; transition: 1000ms ease-in-out .3s;transition-property:left;"
-        heroTranslate.innerHTML = "Art Projects";
-        heroTitle.style.cssText = "font-size: 2.5rem; top:0%; left: 50%; transition: 500ms ease-in-out .75s;" +
-            " transition-property: top,font-size,left;"
-        heroTranslate.style.cssText = "top:16%; left: 10%; font-size:1.5rem; color:rgb(206, 206, 206);" +
-            "text-transform:capitalize; transition: 300ms ease-in;";
-        more.style.cssText = "right: 68%; bottom: 14%";
-        more.innerHTML = "about me";
-        //hero section
-        heroContainer.style.cssText = "margin-right: 20%; width: 0%;" +
-            " transition: 500ms ease-in-out .75s; transition-property:margin-right,width;";
-        //works section
-        works.style.cssText = "transform: translate(-50%, 0%); transition: 500ms ease-in-out 1s;" +
-            " transition-property:transform;";
-        //about section
-        about.style.cssText = "transform: translate(0%, -150%); transition: 800ms ease-in-out .5s; transition-property:transform;"
-
-        indi(1);
-    }
-}
-
-
-function aboutMe() {
-    // if statement to prevent the js from reloading animation
-    if (more != "contacts") {
-        //hero section
-        heroContainer.style.cssText = "margin-right: 20%; width: 0%;" +
-            " transition: 500ms ease-in-out .75s; transition-property:margin-right,width;";
-
-        //works section
-        works.style.cssText = "transform: translate(-150%, 0%); transition: 500ms ease-in-out 1s; transition-property:transform;"
-        //about section
-        about.style.cssText = "transform: translate(0%, 0%); transition: 800ms ease-in-out 1s; transition-property:transform;"
-        //design
-        dleft.style.cssText = "right: 0%; height:3px; transition-property:right,height;" +
-            "transition: 1000ms ease-in-out";
-        dright.style.cssText = "left:2%; transition: 1000ms ease-in-out .5s;transition-property:left;"
-        dmid.style.cssText = "left:35%; transition: 1000ms ease-in-out .3s;transition-property:left;"
-        heroTranslate.innerHTML = "The Artist";
-        heroTitle.style.cssText = "font-size: 2.5rem; top:0%; left: 50%; transition: 500ms ease-in-out .75s;" +
-            " transition-property: top,font-size,left;"
-        heroTranslate.style.cssText = "top:16%; left: 10%; font-size:1.5rem; color:rgb(206, 206, 206);" +
-            "text-transform:capitalize; transition: 300ms ease-in;";
-        more.style.cssText = "bottom: 14%; padding: .25rem .5rem 0rem 10rem;";
-        more.innerHTML = "contacts";
-        indi(2);
-    }
 }
 
 indicator[0].addEventListener("click", () => {
@@ -135,12 +103,10 @@ indicator[3].addEventListener("click", () => {
 let pathNum = 0;
 let setInterv;
 
-function hideImg(x) {
+function hideImg() {
     for (let i = 0; i < 6; i++) {
-        if (i != x)
-            wcimg[i].style.cssText = "width: 0%; transition: 300ms ease-in-out;";
-        console.log(i + ":image width is 0");
-
+        wcimg[i].style.cssText = "width: 0%; transition: 300ms ease-in-out;";
+        // console.log(i + ":image width is 0");
     }
 }
 
@@ -148,11 +114,10 @@ function autoCarou() {
     setInterv = setInterval(function () {
         hideImg();
         wcimg[pathNum].style.cssText = "width: 100%; transition: 300ms ease-in-out;";
-        console.log(pathNum + ":image width is 100");
+        // console.log(pathNum + ":image width is 100");
         pathNum++;
         if (pathNum == 6)
             pathNum = 0;
-
     }, 2500);
 }
 autoCarou();
@@ -162,13 +127,11 @@ function carouOver(x) {
     wcimg[x].style.cssText = "width: 100%; transition: 300ms ease-in-out;";
 }
 for (let i = 0; i < 6; i++) {
-    wciBtn[i].addEventListener("mouseout", () => {
-        autoCarou();
-    });
-}
-for (let i = 0; i < 6; i++) {
     wciBtn[i].addEventListener("mouseover", () => {
         carouOver(i);
         clearInterval(setInterv);
+    });
+    wciBtn[i].addEventListener("mouseout", () => {
+        autoCarou();
     });
 }

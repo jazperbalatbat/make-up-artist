@@ -122,26 +122,26 @@
 
 #design .d_right {
   position: absolute;
-  width: 5px;
+  width: 35%;
+  height: 3px;
+  top: 10%;
+  right: 0%;
+  background: -webkit-gradient(linear, left top, right top, from(#333), color-stop(#333), color-stop(#333), color-stop(goldenrod), color-stop(goldenrod), color-stop(#333), color-stop(#333), color-stop(goldenrod), to(#333));
+  background: linear-gradient(to right, #333, #333, #333, goldenrod, goldenrod, #333, #333, goldenrod, #333);
+}
+
+#design .d_left {
+  position: absolute;
+  width: 3px;
   height: 100%;
   left: 5%;
   background: -webkit-gradient(linear, left top, left bottom, from(#333), color-stop(goldenrod), to(#333));
   background: linear-gradient(#333, goldenrod, #333);
 }
 
-#design .d_left {
-  position: absolute;
-  width: 35%;
-  height: 5px;
-  top: 10%;
-  right: 0%;
-  background: -webkit-gradient(linear, left top, right top, from(#333), color-stop(#333), color-stop(#333), color-stop(#333), color-stop(#333), color-stop(goldenrod), color-stop(#333), to(#333));
-  background: linear-gradient(to right, #333, #333, #333, #333, #333, goldenrod, #333, #333);
-}
-
 #design .d_mid {
   position: absolute;
-  width: 2px;
+  width: 1px;
   height: 85%;
   top: 5%;
   left: 35%;

@@ -77,7 +77,7 @@
 }
 
 .hero__container .hero_img {
-  background: url(/MUartist/images/hero.png);
+  background: url(images/hero.png);
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
@@ -258,27 +258,27 @@
 }
 
 .works__container .w_carousel .wc_indicator .wci_btn:nth-of-type(1) {
-  background-image: url(/MUartist/art/clients/a.png);
+  background-image: url(art/clients/a.png);
 }
 
 .works__container .w_carousel .wc_indicator .wci_btn:nth-of-type(2) {
-  background-image: url(/MUartist/art/clients/b.png);
+  background-image: url(art/clients/b.png);
 }
 
 .works__container .w_carousel .wc_indicator .wci_btn:nth-of-type(3) {
-  background-image: url(/MUartist/art/clients/c.png);
+  background-image: url(art/clients/c.png);
 }
 
 .works__container .w_carousel .wc_indicator .wci_btn:nth-of-type(4) {
-  background-image: url(/MUartist/art/clients/e.png);
+  background-image: url(art/clients/e.png);
 }
 
 .works__container .w_carousel .wc_indicator .wci_btn:nth-of-type(5) {
-  background-image: url(/MUartist/art/clients/f.png);
+  background-image: url(art/clients/f.png);
 }
 
 .works__container .w_carousel .wc_indicator .wci_btn:nth-of-type(6) {
-  background-image: url(/MUartist/art/clients/g.png);
+  background-image: url(art/clients/g.png);
 }
 
 @-webkit-keyframes btn {
@@ -457,52 +457,52 @@
 }
 
 .about__container .ac_indicator .aci_btn:nth-of-type(1) {
-  background: url(/MUartist/art/artist/b1.jpg);
+  background: url(art/artist/b1.jpg);
   background-size: cover;
 }
 
 .about__container .ac_indicator .aci_btn:nth-of-type(2) {
-  background: url(/MUartist/art/artist/b2.jpg);
+  background: url(art/artist/b2.jpg);
   background-size: cover;
 }
 
 .about__container .ac_indicator .aci_btn:nth-of-type(3) {
-  background: url(/MUartist/art/artist/w1.jpg);
+  background: url(art/artist/w1.jpg);
   background-size: cover;
 }
 
 .about__container .ac_indicator .aci_btn:nth-of-type(4) {
-  background: url(/MUartist/art/artist/w2.jpg);
+  background: url(art/artist/w2.jpg);
   background-size: cover;
 }
 
 .about__container .ac_indicator .aci_btn:nth-of-type(5) {
-  background: url(/MUartist/art/artist/w3.jpg);
+  background: url(art/artist/w3.jpg);
   background-size: cover;
 }
 
 .about__container .ac_indicator .aci_btn:nth-of-type(6) {
-  background: url(/MUartist/art/artist/w4.jpg);
+  background: url(art/artist/w4.jpg);
   background-size: cover;
 }
 
 .about__container .ac_indicator .aci_btn:nth-of-type(7) {
-  background: url(/MUartist/art/artist/w5.jpg);
+  background: url(art/artist/w5.jpg);
   background-size: cover;
 }
 
 .about__container .ac_indicator .aci_btn:nth-of-type(8) {
-  background: url(/MUartist/art/artist/w6.jpg);
+  background: url(art/artist/w6.jpg);
   background-size: cover;
 }
 
 .about__container .ac_indicator .aci_btn:nth-of-type(9) {
-  background: url(/MUartist/art/artist/w7.jpg);
+  background: url(art/artist/w7.jpg);
   background-size: cover;
 }
 
 .about__container .ac_indicator .aci_btn:nth-of-type(10) {
-  background: url(/MUartist/art/artist/w8.jpg);
+  background: url(art/artist/w8.jpg);
   background-size: cover;
 }
 
@@ -740,76 +740,76 @@
 }
 
 .contacts__container .links .cc_link:nth-of-type(1) {
-  background: url(/MUartist/sm/fb.png);
+  background: url(sm/fb.png);
   background-size: cover;
 }
 
 .contacts__container .links .cc_link:nth-of-type(1):nth-of-type(1)::before {
-  background: url(/MUartist/sm/fb.png);
+  background: url(sm/fb.png);
   -webkit-box-shadow: 0px 2px 10px #17274b;
           box-shadow: 0px 2px 10px #17274b;
   background-size: cover;
 }
 
 .contacts__container .links .cc_link:nth-of-type(1):nth-of-type(1)::after {
-  background: url(/MUartist/sm/fb.png);
+  background: url(sm/fb.png);
   -webkit-box-shadow: 0px 2px 10px #17274b;
           box-shadow: 0px 2px 10px #17274b;
   background-size: cover;
 }
 
 .contacts__container .links .cc_link:nth-of-type(2) {
-  background: url(/MUartist/sm/ig.png);
+  background: url(sm/ig.png);
   background-size: cover;
 }
 
 .contacts__container .links .cc_link:nth-of-type(2):nth-of-type(2)::before {
-  background: url(/MUartist/sm/ig.png);
+  background: url(sm/ig.png);
   -webkit-box-shadow: 0px 2px 10px #5e1d03;
           box-shadow: 0px 2px 10px #5e1d03;
   background-size: cover;
 }
 
 .contacts__container .links .cc_link:nth-of-type(2):nth-of-type(2)::after {
-  background: url(/MUartist/sm/ig.png);
+  background: url(sm/ig.png);
   -webkit-box-shadow: 0px 2px 10px #5e1d03;
           box-shadow: 0px 2px 10px #5e1d03;
   background-size: cover;
 }
 
 .contacts__container .links .cc_link:nth-of-type(3) {
-  background: url(/MUartist/sm/twt.png);
+  background: url(sm/twt.png);
   background-size: cover;
 }
 
 .contacts__container .links .cc_link:nth-of-type(3):nth-of-type(3)::before {
-  background: url(/MUartist/sm/twt.png);
+  background: url(sm/twt.png);
   -webkit-box-shadow: 0px 2px 10px #03095e;
           box-shadow: 0px 2px 10px #03095e;
   background-size: cover;
 }
 
 .contacts__container .links .cc_link:nth-of-type(3):nth-of-type(3)::after {
-  background: url(/MUartist/sm/twt.png);
+  background: url(sm/twt.png);
   -webkit-box-shadow: 0px 2px 10px #05035e;
           box-shadow: 0px 2px 10px #05035e;
   background-size: cover;
 }
 
 .contacts__container .links .cc_link:nth-of-type(4) {
-  background: url(/MUartist/sm/yt.png);
+  background: url(sm/yt.png);
   background-size: cover;
 }
 
 .contacts__container .links .cc_link:nth-of-type(4):nth-of-type(4)::before {
-  background: url(/MUartist/sm/yt.png);
+  background: url(sm/yt.png);
   -webkit-box-shadow: 0px 2px 10px #5e0303;
           box-shadow: 0px 2px 10px #5e0303;
   background-size: cover;
 }
 
 .contacts__container .links .cc_link:nth-of-type(4):nth-of-type(4)::after {
-  background: url(/MUartist/sm/yt.png);
+  background: url(sm/yt.png);
   -webkit-box-shadow: 0px 2px 10px #5e0303;
           box-shadow: 0px 2px 10px #5e0303;
   background-size: cover;

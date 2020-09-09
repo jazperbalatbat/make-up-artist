@@ -71,13 +71,12 @@ function projects() {
 function contacts() {
     // if statement to prevent the js from reloading animation
     if (more.innerHTML != "home") {
-        designStructure("0%", "50%", "8%", "reach me out!", "2.5rem", "0%", "50%", "68%", "72%", "clamp(1rem, 2vw, 2rem)", "rgb(206, 206, 206)",
+        designStructure("0%", "50%", "8%", "get in touch", "2.5rem", "0%", "50%", "68%", "72%", "clamp(1rem, 2vw, 2rem)", "rgb(206, 206, 206)",
             "capitalize", "14%", "68%", "", "home", "auto 20% auto auto", "0%", "-150%, 0%", "0%, -150%", "0%, 0%");
 
         indi(3);
     }
 }
-contacts();
 
 //navigator main button
 more.addEventListener("click", () => {

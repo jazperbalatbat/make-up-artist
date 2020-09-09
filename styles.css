@@ -661,17 +661,44 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  padding: 10px 10px 0 10px;
 }
 
 .contacts__container .links {
-  height: 50%;
-  width: 80%;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  right: 0;
-  padding: 10%;
+  top: 0%;
+  left: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10% 10% 0 10%;
+  z-index: 1;
+}
+
+.contacts__container .links::after {
+  content: '';
+  width: 40%;
+  border: dashed .1px goldenrod;
+  position: absolute;
+  top: 90%;
+  left: 9.5%;
+  z-index: -1;
+}
+
+.contacts__container .links::before {
+  content: '';
+  width: 20%;
+  height: .5px;
+  background: goldenrod;
+  position: absolute;
+  top: 85%;
+  right: 5%;
+  z-index: -1;
 }
 
 .contacts__container .links .cc_link {
@@ -680,12 +707,13 @@
   width: 50px;
   text-decoration: none;
   font-size: 20px;
-  margin: 10px;
+  margin: 40% 10px 10px 10px;
   -webkit-transform: rotate(40deg) skewX(-20deg);
           transform: rotate(40deg) skewX(-20deg);
   border-radius: 50px;
   -webkit-box-shadow: 1px 2px 3px black;
           box-shadow: 1px 2px 3px black;
+  z-index: 200;
 }
 
 .contacts__container .links .cc_link::before, .contacts__container .links .cc_link::after {
@@ -801,6 +829,61 @@
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
   opacity: 1;
+}
+
+.contacts__container .svg {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0%;
+  z-index: 1;
+}
+
+.contacts__container .cc_img {
+  width: 100%;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: .7;
+}
+
+.contacts__container .cc_information {
+  position: absolute;
+  height: 80%;
+  width: 97%;
+  padding: 5%;
+  text-align: right;
+}
+
+.contacts__container .cc_information .title {
+  font-size: 3rem;
+  font-weight: 700;
+  position: relative;
+  color: #e9e9e9;
+  z-index: 1;
+  line-height: 2;
+  font-family: 'Frank Ruhl Libre', serif;
+  text-shadow: 1px 1px 2px black;
+}
+
+.contacts__container .cc_information .title::before {
+  content: 'Frank Ruhl';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -20%;
+  color: rgba(165, 165, 165, 0.507);
+  right: 30%;
+  font-weight: 100;
+  z-index: -1;
+}
+
+.contacts__container .cc_information .description,
+.contacts__container .cc_information .number {
+  text-shadow: 1px 1px 2px black;
+  font-family: 'Frank Ruhl Libre', serif;
+  color: white;
 }
 
 body {

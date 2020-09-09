@@ -8,6 +8,7 @@ let heroContainer = document.querySelector(".hero__container");
 let hero = document.querySelector("#hero");
 let works = document.querySelector("#works");
 let about = document.querySelector("#about");
+let contact = document.querySelector("#contacts");
 let indicator = document.querySelectorAll("#design ul li");
 let wcimg = document.querySelectorAll(".wc_img");
 let wciBtn = document.querySelectorAll(".wci_btn");
@@ -34,47 +35,57 @@ function designStructure(...args) {
     works.style.cssText = "transform: translate(" + args[18] + "); transition: 500ms ease-in-out .5s; transition-property:transform;"
     //about section
     about.style.cssText = "transform: translate(" + args[19] + "); transition: 500ms ease-in-out .5s; transition-property:transform;"
+    //contacts section
+    contact.style.cssText = "transform: translate(" + args[20] + "); transition: 700ms ease-in-out .5s; transition-property:transform;"
 }
+//contacts section
+function contacts() {
+    // if statement to prevent the js from reloading animation
+    if (more.innerHTML != "home") {
+        designStructure("0%", "50%", "8%", "reach me out!", "2.5rem", "0%", "50%", "68%", "72%", "clamp(1rem, 2vw, 2rem)", "rgb(206, 206, 206)",
+            "capitalize", "14%", "68%", "", "home", "auto 20% auto auto", "0%", "-150%, 0%", "0%, -150%", "0%, 0%");
+
+        indi(3);
+    }
+}
+// contacts();
 
 function heroPage() {
     // if statement to prevent the js from reloading animation
-    if (more.innerHTML != "see more") {
+    if (more.innerHTML != "meet the artist!") {
         designStructure("0%", "5%", "35%", "makeup artist", "10rem", "17%", "50%", "43%", "27%", "clamp(.9rem, 1.5vw, 2rem)", "#333",
-            "lowercase", "25%", "10%", "", "see more", "auto", "60%", "-150%, 0%", "0%, -150%");
-        indi(2);
+            "lowercase", "25%", "10%", "", "meet the artist!", "auto", "60%", "-150%, 0%", "0%, -150%", "0%, 100%");
+        indi(0);
     }
 
 }
-
+//artist sectiom
 function seeMore() {
     // if statement to prevent the js from reloading animation
-    if (more.innerHTML != "about me") {
-        designStructure("40%", "95%", "78%", "art projects", "2.5rem", "0%", "50%", "16%", "10%", "clamp(1rem, 2vw, 2rem)", "rgb(206, 206, 206)",
-            "capitalize", "14%", "68%", "", "about me", "auto 20% auto auto", "0%", "-50%, 0%", "0%, -150%");
-
+    if (more != "projects") {
+        designStructure("0%", "2%", "35%", "the artist", "2.5rem", "0%", "50%", "16%", "10%", "clamp(1rem, 2vw, 2rem)", "rgb(206, 206, 206)",
+            "capitalize", "21%", "68%", ".25rem .0rem 0rem 10rem", "projects", "auto 20% auto auto", "0%", "-150%, 0%", "0%, 0%", "0%, 100%");
         indi(1);
     }
 }
-
-function aboutMe() {
+//project section
+function projects() {
     // if statement to prevent the js from reloading animation
-    if (more != "contacts") {
-        designStructure("0%", "2%", "35%", "the artist", "2.5rem", "0%", "50%", "16%", "10%", "clamp(1rem, 2vw, 2rem)", "rgb(206, 206, 206)",
-            "capitalize", "14%", "10%", ".25rem .0rem 0rem 10rem", "contacts", "auto 20% auto auto", "0%", "-150%, 0%", "0%, 0%");
+    if (more.innerHTML != "contacts") {
+        designStructure("40%", "95%", "78%", "art projects", "2.5rem", "0%", "50%", "16%", "10%", "clamp(1rem, 2vw, 2rem)", "rgb(206, 206, 206)",
+            "capitalize", "14%", "67%", "", "contacts", "auto 20% auto auto", "0%", "-50%, 0%", "0%, -150%", "0%, 100%");
+
         indi(2);
     }
 }
-//navigator main button
-if (more.innerHTML == "about me") {
-    aboutMe();
 
-}
+//navigator main button
 more.addEventListener("click", () => {
-    if (more.innerHTML == "see more") {
+    if (more.innerHTML == "meet the artist!") {
         seeMore();
 
-    } else if (more.innerHTML == "about me") {
-        aboutMe();
+    } else if (more.innerHTML == "projects") {
+        projects();
 
     }
 });
@@ -96,11 +107,13 @@ indicator[1].addEventListener("click", () => {
 });
 indicator[2].addEventListener("click", () => {
     indi(2);
-    aboutMe();
+    projects();
 });
 indicator[3].addEventListener("click", () => {
     indi(3);
+    contacts();
 });
+
 
 
 //CAROUSEL(WORK) SECTION

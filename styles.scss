@@ -14,6 +14,7 @@ body {
     background: url(../MUartist/images/bg.jpg);
     background-size: cover;
     height: 100vh;
+    overflow: hidden;
 }
 
 #hero {
@@ -42,6 +43,31 @@ body {
     position: absolute;
     padding: 10%;
     transform: translate(0%, -150%);
+    // display: none;
+
+}
+
+#contacts {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 10%;
+    // background: tomato;
+
+    transform: translate(0%, 100%);
+    // display: none;
+
+    .contacts__container {
+        height: 80%;
+        width: 60%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: rgb(49, 49, 49);
+        display: flex;
+        position: relative;
+        // overflow: hidden;
+    }
 
 }
 

@@ -116,16 +116,19 @@
             font-style: italic;
             top: -19%;
             left: -10%;
-            letter-spacing: -25px;
             animation: move 100000ms infinite;
 
             @keyframes move {
+                0% {
+                    transform: translateX(0px)skewX(-30deg);
+                }
+
                 50% {
-                    transform: translateX(250px);
+                    transform: translateX(250px)skewX(-30deg);
                 }
 
                 100% {
-                    transform: translateX(0px);
+                    transform: translateX(0px)skewX(-30deg);
                 }
             }
 

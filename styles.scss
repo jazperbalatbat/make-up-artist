@@ -8,6 +8,7 @@
 @import 'hero';
 @import 'design';
 @import 'works';
+@import 'about';
 
 body {
     background: url(../MUartist/images/bg.jpg);
@@ -21,7 +22,9 @@ body {
     position: absolute;
     padding: 10%;
     // display: none;
+
 }
+
 
 #works {
     height: 100%;
@@ -30,22 +33,45 @@ body {
     left: 50%;
     padding: 10%;
     transform: translate(-150%, 0%);
+    // display: none;
 }
 
 #about {
     height: 100%;
     width: 100%;
     position: absolute;
-    // left: 50%;
     padding: 10%;
     transform: translate(0%, -150%);
 
-    .about__container {
-        height: 100%;
-        width: 100%;
-        background: rgb(49, 49, 49);
-
-    }
-
-    // display: none;
 }
+
+
+// @media (max-width:900px) {
+//     #hero {
+//         padding: 6%;
+
+//         .hero__container {
+//             width: 85%;
+
+//             .hero_img {
+//                 background-size: 60%;
+//             }
+//         }
+//     }
+
+// }
+
+// @media (max-width:700px) {
+//     #hero {
+//         padding: 5%;
+
+//         .hero__container {
+//             width: 95%;
+
+//             .hero_img {
+//                 background-size: 60%;
+//             }
+//         }
+//     }
+
+// }

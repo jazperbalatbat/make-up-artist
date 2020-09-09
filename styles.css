@@ -21,18 +21,19 @@
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
-  font-size: 10.5vw;
-  background: -webkit-linear-gradient(goldenrod, #333);
+  font-size: clamp(6rem, 10.5vw, 10rem);
+  background: -webkit-linear-gradient(goldenrod, #c28f0e, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  z-index: 2;
 }
 
 .hero_translate {
   top: 43%;
   left: 27%;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.5vw, 2rem);
   color: #333;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero_translate::before {
@@ -51,7 +52,7 @@
   color: rgba(218, 165, 32, 0.705);
   top: 20%;
   right: 1%;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 1vw, 2rem);
   letter-spacing: 5px;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
@@ -65,8 +66,10 @@
   background-size: cover;
   height: 100%;
   width: 60%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#b3b3b3), to(#333));
-  background: linear-gradient(#b3b3b3, #333);
+  background: -webkit-gradient(linear, left top, left bottom, from(#cecdcd), to(#464646));
+  background: linear-gradient(#cecdcd, #464646);
+  background: -webkit-gradient(linear, left top, left bottom, from(#575757), to(white));
+  background: linear-gradient(#575757, white);
   position: relative;
   margin: auto;
   -webkit-box-shadow: inset 0px 2px 5px -2px black, 0px 2px 3px black;
@@ -83,7 +86,7 @@
   -webkit-filter: drop-shadow(0px 0px 15px black);
           filter: drop-shadow(0px 0px 15px black);
   z-index: 2;
-  background-size: 50%;
+  background-size: 52%;
 }
 
 #design {
@@ -126,8 +129,8 @@
   height: 3px;
   top: 10%;
   right: 0%;
-  background: -webkit-gradient(linear, left top, right top, from(#333), color-stop(#333), color-stop(#333), color-stop(goldenrod), color-stop(goldenrod), color-stop(#333), color-stop(#333), color-stop(goldenrod), to(#333));
-  background: linear-gradient(to right, #333, #333, #333, goldenrod, goldenrod, #333, #333, goldenrod, #333);
+  background: -webkit-gradient(linear, left top, right top, from(#333), color-stop(#333), color-stop(goldenrod), color-stop(goldenrod), color-stop(#333), color-stop(#333), color-stop(#333), to(#333));
+  background: linear-gradient(to right, #333, #333, goldenrod, goldenrod, #333, #333, #333, #333);
 }
 
 #design .d_left {
@@ -157,24 +160,52 @@
   font-family: 'Sofia', cursive;
   border-bottom: dashed 1px #7a6329;
   border-radius: 40px 100px 0 0;
-  color: silver;
+  color: goldenrod;
   padding: .25rem 15rem 0rem .5rem;
   bottom: 25%;
   right: 10%;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 2rem);
   font-style: italic;
-  font-weight: 100;
+  font-weight: 700;
   -webkit-transition: 400ms ease-in;
   transition: 400ms ease-in;
   z-index: 3;
   cursor: pointer;
+  -webkit-animation: mores 2000ms infinite;
+          animation: mores 2000ms infinite;
 }
 
 .more:hover {
-  color: goldenrod;
-  letter-spacing: 10px;
+  color: silver;
+  letter-spacing: 7px;
   padding: .25rem 0rem 0rem 10rem;
-  border-bottom: solid 1px #7a6329;
+  border-bottom-style: solid;
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes mores {
+  0% {
+    color: goldenrod;
+  }
+  40% {
+    color: silver;
+  }
+  100% {
+    color: goldenrod;
+  }
+}
+
+@keyframes mores {
+  0% {
+    color: goldenrod;
+  }
+  40% {
+    color: silver;
+  }
+  100% {
+    color: goldenrod;
+  }
 }
 
 .works__container {
@@ -309,30 +340,37 @@
   font-style: italic;
   top: -19%;
   left: -10%;
-  letter-spacing: -25px;
   -webkit-animation: move 100000ms infinite;
           animation: move 100000ms infinite;
 }
 
 @-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateX(0px) skewX(-30deg);
+            transform: translateX(0px) skewX(-30deg);
+  }
   50% {
-    -webkit-transform: translateX(250px);
-            transform: translateX(250px);
+    -webkit-transform: translateX(250px) skewX(-30deg);
+            transform: translateX(250px) skewX(-30deg);
   }
   100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(0px) skewX(-30deg);
+            transform: translateX(0px) skewX(-30deg);
   }
 }
 
 @keyframes move {
+  0% {
+    -webkit-transform: translateX(0px) skewX(-30deg);
+            transform: translateX(0px) skewX(-30deg);
+  }
   50% {
-    -webkit-transform: translateX(250px);
-            transform: translateX(250px);
+    -webkit-transform: translateX(250px) skewX(-30deg);
+            transform: translateX(250px) skewX(-30deg);
   }
   100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translateX(0px) skewX(-30deg);
+            transform: translateX(0px) skewX(-30deg);
   }
 }
 
@@ -384,6 +422,224 @@
   right: 6%;
 }
 
+.about__container {
+  height: 100%;
+  width: 100%;
+  background: #313131;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.about__container .ac_indicator {
+  height: 190%;
+  width: 7%;
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  left: 68%;
+  -webkit-transform: translate(-68%, 0%) skewX(-13deg);
+          transform: translate(-68%, 0%) skewX(-13deg);
+  bottom: 0;
+  z-index: 10;
+  -webkit-box-shadow: 0px 0px 18px black;
+          box-shadow: 0px 0px 18px black;
+}
+
+.about__container .ac_indicator .aci_btn {
+  -webkit-box-shadow: 0px 0px 8px black;
+          box-shadow: 0px 0px 8px black;
+  -webkit-animation: acibtn 40000ms infinite;
+          animation: acibtn 40000ms infinite;
+  border: none;
+  outline-width: 0;
+}
+
+.about__container .ac_indicator .aci_btn:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.about__container .ac_indicator .aci_btn:nth-of-type(1) {
+  background: url(/MUartist/art/artist/b1.jpg);
+  background-size: cover;
+}
+
+.about__container .ac_indicator .aci_btn:nth-of-type(2) {
+  background: url(/MUartist/art/artist/b2.jpg);
+  background-size: cover;
+}
+
+.about__container .ac_indicator .aci_btn:nth-of-type(3) {
+  background: url(/MUartist/art/artist/w1.jpg);
+  background-size: cover;
+}
+
+.about__container .ac_indicator .aci_btn:nth-of-type(4) {
+  background: url(/MUartist/art/artist/w2.jpg);
+  background-size: cover;
+}
+
+.about__container .ac_indicator .aci_btn:nth-of-type(5) {
+  background: url(/MUartist/art/artist/w3.jpg);
+  background-size: cover;
+}
+
+.about__container .ac_indicator .aci_btn:nth-of-type(6) {
+  background: url(/MUartist/art/artist/w4.jpg);
+  background-size: cover;
+}
+
+.about__container .ac_indicator .aci_btn:nth-of-type(7) {
+  background: url(/MUartist/art/artist/w5.jpg);
+  background-size: cover;
+}
+
+.about__container .ac_indicator .aci_btn:nth-of-type(8) {
+  background: url(/MUartist/art/artist/w6.jpg);
+  background-size: cover;
+}
+
+.about__container .ac_indicator .aci_btn:nth-of-type(9) {
+  background: url(/MUartist/art/artist/w7.jpg);
+  background-size: cover;
+}
+
+.about__container .ac_indicator .aci_btn:nth-of-type(10) {
+  background: url(/MUartist/art/artist/w8.jpg);
+  background-size: cover;
+}
+
+@-webkit-keyframes acibtn {
+  50% {
+    -webkit-transform: translateY(350px);
+            transform: translateY(350px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes acibtn {
+  50% {
+    -webkit-transform: translateY(350px);
+            transform: translateY(350px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.about__container .a_carousel {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  padding: 10px;
+}
+
+.about__container .a_carousel .ac_img {
+  height: 100%;
+  width: 0%;
+}
+
+.about__container .a_carousel .ac_img:nth-of-type(1) {
+  width: 100%;
+}
+
+.about__container .a_information {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  padding: 7%;
+  text-align: right;
+}
+
+.about__container .a_information .fontbg {
+  position: absolute;
+  font-family: 'Sofia', cursive;
+  width: 100%;
+  height: 100%;
+  font-size: 23rem;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.11);
+  font-style: italic;
+  top: -19%;
+  right: -10%;
+  -webkit-animation: move 200000ms infinite;
+          animation: move 200000ms infinite;
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateX(0px) skewX(-30deg);
+            transform: translateX(0px) skewX(-30deg);
+  }
+  50% {
+    -webkit-transform: translateX(-390px) skewX(-30deg);
+            transform: translateX(-390px) skewX(-30deg);
+  }
+  100% {
+    -webkit-transform: translateX(0px) skewX(-30deg);
+            transform: translateX(0px) skewX(-30deg);
+  }
+}
+
+.about__container .a_information .title {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  position: relative;
+  color: #e9e9e9;
+  z-index: 1;
+  line-height: 1.8;
+}
+
+.about__container .a_information .title::before {
+  content: 'Frank Ruhl';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -20%;
+  color: rgba(133, 133, 133, 0.788);
+  right: 30%;
+  font-weight: 100;
+  z-index: -1;
+}
+
+.about__container .a_information .title::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background: white;
+  top: -30%;
+  right: 30%;
+}
+
+.about__container .a_information p {
+  font-family: 'Frank Ruhl Libre', serif;
+  color: #dddddd;
+  line-height: 1;
+}
+
+.about__container .a_information p::after {
+  content: '';
+  position: absolute;
+  width: 25%;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.527);
+  bottom: 5%;
+  left: 6%;
+}
+
 body {
   background: url(../MUartist/images/bg.jpg);
   background-size: cover;
@@ -414,11 +670,5 @@ body {
   padding: 10%;
   -webkit-transform: translate(0%, -150%);
           transform: translate(0%, -150%);
-}
-
-#about .about__container {
-  height: 100%;
-  width: 100%;
-  background: #313131;
 }
 /*# sourceMappingURL=styles.css.map */

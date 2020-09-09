@@ -1,0 +1,202 @@
+.about__container {
+    height: 100%;
+    width: 100%;
+    background: rgb(49, 49, 49);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    .ac_indicator {
+        height: 190%;
+        width: 7%;
+        position: absolute;
+        display: grid;
+        left: 68%;
+        transform: translate(-68%, 0%) skewX(-13deg);
+        bottom: 0;
+        z-index: 10;
+        box-shadow: 0px 0px 18px black;
+
+        .aci_btn {
+            box-shadow: 0px 0px 8px black;
+            animation: acibtn 40000ms infinite;
+            border: none;
+            outline-width: 0;
+
+            &:hover {
+                // animation: none;
+                transform: scale(1.5);
+            }
+
+            &:nth-of-type(1) {
+                background: url(/MUartist/art/artist/b1.jpg);
+                background-size: cover;
+            }
+
+            &:nth-of-type(2) {
+                background: url(/MUartist/art/artist/b2.jpg);
+                background-size: cover;
+            }
+
+            &:nth-of-type(3) {
+                background: url(/MUartist/art/artist/w1.jpg);
+                background-size: cover;
+            }
+
+            &:nth-of-type(4) {
+                background: url(/MUartist/art/artist/w2.jpg);
+                background-size: cover;
+            }
+
+            &:nth-of-type(5) {
+                background: url(/MUartist/art/artist/w3.jpg);
+                background-size: cover;
+            }
+
+            &:nth-of-type(6) {
+                background: url(/MUartist/art/artist/w4.jpg);
+                background-size: cover;
+            }
+
+            &:nth-of-type(7) {
+                background: url(/MUartist/art/artist/w5.jpg);
+                background-size: cover;
+            }
+
+            &:nth-of-type(8) {
+                background: url(/MUartist/art/artist/w6.jpg);
+                background-size: cover;
+            }
+
+            &:nth-of-type(9) {
+                background: url(/MUartist/art/artist/w7.jpg);
+                background-size: cover;
+            }
+
+            &:nth-of-type(10) {
+                background: url(/MUartist/art/artist/w8.jpg);
+                background-size: cover;
+            }
+
+            @keyframes acibtn {
+
+                50% {
+                    transform: translateY(350px);
+                }
+
+                to {
+                    transform: translateY(0px);
+                }
+            }
+        }
+    }
+
+    .a_carousel {
+        // background: tomato;
+        width: 40%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        right: 0;
+        padding: 10px;
+
+
+        .ac_img {
+            height: 100%;
+            width: 0%;
+            // opacity: .1;
+
+            &:nth-of-type(1) {
+                width: 100%;
+            }
+        }
+    }
+
+    .a_information {
+        width: 60%;
+        height: 100%;
+        position: relative;
+        padding: 7%;
+        text-align: right;
+
+        .fontbg {
+            position: absolute;
+            font-family: 'Sofia',
+                cursive;
+            width: 100%;
+            height: 100%;
+            font-size: 23rem;
+            font-weight: 100;
+            color: rgba(0, 0, 0, 0.11);
+            font-style: italic;
+            top: -19%;
+            right: -10%;
+            animation: move 200000ms infinite;
+            // transform: skewX(-30deg);
+
+            @keyframes move {
+                0% {
+                    transform: translateX(0px)skewX(-30deg);
+                }
+
+                50% {
+                    transform: translateX(-390px)skewX(-30deg);
+                }
+
+                100% {
+                    transform: translateX(0px)skewX(-30deg);
+                }
+            }
+
+        }
+
+        .title {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            position: relative;
+            color: rgb(233, 233, 233);
+            z-index: 1;
+            line-height: 1.8;
+
+            &::before {
+                content: 'Frank Ruhl';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: -20%;
+                color: rgba(133, 133, 133, 0.788);
+                right: 30%;
+                font-weight: 100;
+                z-index: -1;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 80%;
+                height: 1px;
+                background: white;
+                top: -30%;
+                right: 30%;
+            }
+        }
+
+        p {
+            font-family: 'Frank Ruhl Libre', serif;
+            color: rgb(221, 221, 221);
+            line-height: 1;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 25%;
+                height: 5px;
+                background: rgba(0, 0, 0, 0.527);
+                bottom: 5%;
+                left: 6%;
+            }
+        }
+    }
+
+}

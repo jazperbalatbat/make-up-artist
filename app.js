@@ -78,6 +78,11 @@ function contacts() {
     }
 }
 
+//hero title button
+heroTitle.addEventListener("click", () => {
+    heroPage();
+});
+
 //navigator main button
 more.addEventListener("click", () => {
     if (more.innerHTML == "meet the artist!") {

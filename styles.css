@@ -703,14 +703,12 @@
 
 .contacts__container .links .cc_link {
   position: relative;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   text-decoration: none;
   font-size: 20px;
-  margin: 40% 10px 10px 10px;
-  -webkit-transform: rotate(40deg) skewX(-20deg);
-          transform: rotate(40deg) skewX(-20deg);
-  border-radius: 50px;
+  margin: 42% 10px 10px 10px;
+  border-radius: 5px;
   -webkit-box-shadow: 1px 2px 3px black;
           box-shadow: 1px 2px 3px black;
   z-index: 200;
@@ -719,14 +717,14 @@
 .contacts__container .links .cc_link::before, .contacts__container .links .cc_link::after {
   content: '';
   position: absolute;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   text-decoration: none;
-  margin: 25px;
+  margin: 20px;
   bottom: -50%;
   right: -50%;
   opacity: 0;
-  border-radius: 50px;
+  border-radius: 5px;
 }
 
 .contacts__container .links .cc_link::before {
